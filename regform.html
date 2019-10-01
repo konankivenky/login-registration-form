@@ -1,0 +1,135 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css" rel="stylesheet">
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+  
+
+
+
+
+<div class="container text-primary my-3" style="width: 600px;">
+    <h2 class="d-flex justify-content-center bg-success text-white">REGISTRATION</h2>
+    <div class="form-group">
+        <label>user name:</label>
+        <input type="text" id="username" class="form-control">
+    </div>
+
+    <div class="form-group">
+            <label>email:</label>
+            <input type="email" id="email" class="form-control">
+        </div>
+
+
+
+    <div class="form-group">
+        <label>password:</label>
+            <input type="password" id="password" class="form-control">
+        </div>
+
+        <p>Date: <input type="text" class="form-control "id="datepicker"></p>
+
+        <label>Gender:</label>
+        <div class="form-check">
+                
+                <input type="radio" class="form-check-radio gender" name="gender" value="male" >male
+                <input type="radio" class="form-check-radio gender" name="gender" value="female" >female
+                <input type="radio" class="form-check-radio gender" name="gender" value="others" >other
+            </div>
+            <label>Hobbies:</label>
+            <div class="form-check" >
+                    
+                    <input type="checkbox" class="form-check-checkbox hobbies" value="cricket" >cricket
+                    <input type="checkbox" class="form-check-checkbox hobbies" value="hockey">hockey
+                    <input type="checkbox" class="form-check-checkbox hobbies" value="music">music
+                </div>
+                <label>Address:</label>
+                <div class="form-group">
+                    <label>address:</label>
+                    <textarea class="form-control" id="address" rows="3" cols="4"></textarea>
+                </div>
+                <label>Country</label>
+                <div class="form-group">
+                    <select class="form-control " id="Country">
+                        <option>INDIA</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>AUSTRALIA</option>
+                    </select>
+                </div>
+
+    <div class="form-group d-flex justify-content-end">
+    <a href="#" type="button" class="btn btn-info getdata mr-3" >Submit</a>
+    <a href="users.html" type="button" class="btn btn-success" >cancel</a>
+</div>
+</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+  <script>
+
+        $(".my_select_box").chosen({
+            disable_search_threshold: 10,
+            no_results_text: "Oops, nothing found!",
+            width: "95%"
+          });
+             $("#country").chosen({no_results_text: "Oops, nothing found!"}); 
+        </script>
+<script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+
+        
+       
+
+$(".getdata").click(function(){
+
+
+
+    var username=$("#username").val();
+    var email=$("#email").val();
+    var password=$("#password").val();
+    var datepicker=$("#datepicker").val();
+    var gender=$("#gender").val();
+    var hobbies=$("#hobbies").val();
+    var address=$("#address").val();
+    var country=$("#country").val();
+
+
+    var registration={
+        "username":username,
+        "email":email,
+        "password":password,
+        "datepicker":datepicker,
+        "gender":gender,
+        "hobbies":hobbies,
+        "address":address,
+        "county":country
+
+    }
+
+    console.log(registration);
+
+
+
+})
+
+
+
+</script>
